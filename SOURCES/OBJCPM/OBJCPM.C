@@ -136,7 +136,7 @@ void closeFiles();
 
 
 char signonMsg[] = "ISIS-II OBJECT CONVERTER TO CP/M EXECUTABLE";
-char szVersion[] = "v1.2";
+char szVersion[] = "v1.3";
 
 struct {
     char *dev;
@@ -971,7 +971,7 @@ int Parse()
                             }
                         }
                     }
-                    if (tmp >= BaseAddress)
+                    if (tmp < BaseAddress)
                     {
                         // меняем местами BaseAddress и текущий адрес
                         tmp = BaseAddress;
